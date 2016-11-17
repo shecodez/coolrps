@@ -9,6 +9,7 @@ def index(request):
     return render(request, 'index.html')
 
 def about(request):
+    dumb = None
     if request.method == 'GET':
         pass
     elif request.method == 'POST':
