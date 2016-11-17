@@ -11,7 +11,7 @@ def index(request):
 def about(request):
     dumb = None
     if request.method == 'GET':
-        pass
+        dumb = "this was a GET"
     elif request.method == 'POST':
         dumb = request.POST['dumb']
     return render(request,'about.html',{'dumb':dumb})
