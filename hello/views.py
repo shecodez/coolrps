@@ -14,7 +14,7 @@ def about(request):
         dumb = "this was a GET"
     elif request.method == 'POST':
         dumb = request.POST['dumb']
-    return render(request,'about.html',{'dumb':dumb})
+    return render(request,'about.html',{'ourvariable':dumb})
 
 def db(request):
 
