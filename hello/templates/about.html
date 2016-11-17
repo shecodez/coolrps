@@ -8,6 +8,7 @@
 </form>
 
 <form action="about.html" method="GET">
+    {% csrf_token %}
     <input name="dumb" value="dumb-value" type="text"/>
     <input name="submit" value="Send GET" type="submit"/>
 </form>
