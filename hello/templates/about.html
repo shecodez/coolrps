@@ -1,2 +1,12 @@
 <!--Created by Nicole J. Nobles on 11/16/2016.
 --><h2>About Page</h2>
+<span> {{ dumb }} </span>
+<form action="about.html" method="POST">
+    <input name="dumb" value="dumb-value" type="text"/>
+    <input name="submit" value="Send POST" type="submit"/>
+</form>
+
+<form action="about.html" method="GET">
+    <input name="dumb" value="dumb-value" type="text"/>
+    <input name="submit" value="Send GET" type="submit"/>
+</form>

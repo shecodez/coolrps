@@ -8,6 +8,12 @@ def index(request):
     # return HttpResponse('Hello from Python!')
     return render(request, 'index.html')
 
+def about(request):
+    if request.method == 'GET':
+        pass
+    elif request.method == 'POST':
+        dumb = request.POST['dumb']
+    return render(request,'about.html',{'dumb':dumb})
 
 def db(request):
 
@@ -17,4 +23,3 @@ def db(request):
     greetings = Greeting.objects.all()
 
     return render(request, 'db.html', {'greetings': greetings})
-
