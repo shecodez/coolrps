@@ -12,3 +12,26 @@
     <input name="dumb" value="dumb-value" type="text"/>
     <input name="submit" value="Send GET" type="submit"/>
 </form>
+
+<input id="clicky" value="jquery request"/>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+  <script>
+  $('#clicky').on("click",function(){
+      console.log('clicked thingy');
+        $.ajax({
+            url:'about.html',
+            data:{'dumb':'jquery'},
+            error: function() {
+                alert('omg 404');
+            },
+            success: function(data) {
+                alert('success');
+            },
+            type: 'GET'
+        });
+    });
+    </script>
