@@ -2,6 +2,7 @@
 --><h2>About Page</h2>
 <span> {{ dumb }} </span>
 <form action="about.html" method="POST">
+    {% csrf_token %}
     <input name="dumb" value="dumb-value" type="text"/>
     <input name="submit" value="Send POST" type="submit"/>
 </form>
